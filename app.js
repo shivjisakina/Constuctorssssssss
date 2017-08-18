@@ -63,6 +63,27 @@ console.log(myFatherMethod);
 
 //========================================================
 
+// Prototypesssss
+
+// Constructor
+var Box = function (color)
+{
+    this.color = color;
+};
+
+Box.prototype.getColor = function()
+{
+    return this.color;
+};
+
+var blueBox = new Box("blue");
+console.log(blueBox.getColor());
+
+var greenBox = new Box("green");
+console.log(greenBox.getColor());
+
+//========================================================
+
 // How could I use these in a more advanced way?
 
     // Pushing data through the constructor
