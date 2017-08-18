@@ -66,13 +66,11 @@ console.log(myFatherMethod);
 // Prototypesssss
 
 // Constructor
-var Box = function (color)
-{
+var Box = function (color) {
     this.color = color;
 };
 
-Box.prototype.getColor = function()
-{
+Box.prototype.getColor = function () {
     return this.color;
 };
 
@@ -89,7 +87,6 @@ console.log(greenBox.getColor());
     // Pushing data through the constructor
     // Creating an API
     // Present a lot of similar data
-
 
 //========================================================
 
