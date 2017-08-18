@@ -6,11 +6,14 @@ var Person = function (first, last, age, eye) {
     this.age = age;
     this.eyeColor = eye;
 
-}
+};
 
 // Creating new objects using the function
 var myFather = new Person("John", "Doe", 50, "blue");
 var myMother = new Person("Sally", "Rally", 48, "green");
+
+// You can also add a new item to your object
+myFather.nationality = "American";
 
 // Console logging to see if I get the objects
 console.log(myFather);
@@ -18,10 +21,6 @@ console.log(myMother);
 
 // Parsing through constructor function to get firstname
 console.log(myFather.firstName);
-
-//========================================================
-
-// How could I use this for more advanced functions?
 
 //========================================================
 
@@ -34,6 +33,10 @@ var PersonMethod = function (first, last, age, eye) {
     this.age = age;
     this.eye = eye;
 
+    this.fullName = function () {
+        return this.firstname + " " + this.lastname;
+    };
+
     // Parameter is what you'll change
     this.changeEyeColor = function (color) {
 
@@ -42,7 +45,7 @@ var PersonMethod = function (first, last, age, eye) {
 
     }
 
-}
+};
 
 var myFatherMethod = new PersonMethod("John2", "Doe2", 50, "blue2");
 
@@ -52,8 +55,22 @@ myFatherMethod.changeEyeColor("notBlue");
 // Calling eye out to see if it updated
 console.log(myFatherMethod.eye);
 
+// Console logging the full name
+console.log(myFatherMethod.fullName());
+
 // Console logging the whole object
 console.log(myFatherMethod);
+
+//========================================================
+
+// How could I use these in a more advanced way?
+
+    // Pushing data through the constructor
+    // Creating an API
+    // Present a lot of similar data
+
+
+//========================================================
 
 
 
